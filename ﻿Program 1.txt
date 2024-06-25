@@ -1,0 +1,251 @@
+﻿Program 1:
+
+#Write a Python program to check the validity of password input by users.
+#23B81A62A4
+
+pas=input('Enter the password :')
+isNum=False
+isChar=False
+islen=False
+isalphaL=False
+isalphaU=False
+for i in pas:
+    if i.isdigit():
+        isNum=True
+    if i=='$' or i=='#' or i=='@':
+        isChar=True
+    if i.isupper():
+        isalphaU=True
+    if i.islower():
+        isalphaL=True
+if len(pas)>5 and len(pas)<17:
+    islen=True
+if isNum==isChar==islen==isalphaL==isalphaU==True:
+    print("Yes")
+else:
+    print("No")
+
+output:-
+
+Enter the password :Sainath123@
+Yes
+
+Program  2
+
+Calculator.py(module)
+#module
+def addition (a,b):
+    print(a+b)
+def subtraction(a,b):
+    print(a-b)
+def multiplication(a,b):
+    print(a*b)
+def division(a,b):
+    print(a/b)
+
+
+demo.py
+
+#Creating and Accessing a Simple Module:
+#23B81A62A4
+import calculator
+a=int(input('Enter a number:'))
+b=int(input('Enter a number:'))
+calculator.addition(a,b)
+calculator.subtraction(a,b)
+calculator.multiplication(a,b)
+calculator.division(a,b)
+
+import calculator as c
+ 
+c.addition(a,b)
+c.subtraction(a,b)
+c.multiplication(a,b)
+c.division(a,b)
+
+from calculator import *
+
+addition(a,b)
+subtraction(a,b)
+multiplication(a,b)
+division(a,b)
+from calculator import addition,subtraction,multiplication,division
+
+addition(a,b)
+subtraction(a,b)
+multiplication(a,b)
+division(a,b)
+
+
+output:-
+
+Enter a number:3
+Enter a number:3
+6
+0
+9
+1.0
+6
+0
+9
+1.0
+6
+0
+9
+1.0
+6
+0
+9
+1.0
+
+
+
+
+Program 3:
+
+#Write a program that calculates the area of a circle using the math module's pi constant and pow () function.
+#23B81A62A4
+
+from math import *
+r=int(input("Enter the radius:"))
+print("Area of the circle whose radius is",r,"=",pow(r,2)*pi)
+
+
+output:-
+Enter the radius:7
+Area of the circle whose radius is 7 = 153.93804002589985
+
+Program 4:
+
+#Create a function that takes a number as input and returns its factorial using the math module's factorial () function.
+#23B81A62A4
+
+from math import *
+n=int(input("Enter the number:"))
+print(n,"!=",factorial(n))
+
+output:-
+
+Enter the number:5
+5 != 120
+
+
+program 5:
+
+#Implement a program that calculates the hypotenuse of a right triangle using he math module's sqrt () function.
+#23B81A62A4
+from math import *
+a=int(input("Enter the adjecent side len:"))
+b=int(input("Enter the oppposite side len:"))
+c=sqrt(a**2+b**2)
+print(c)
+
+output:-
+
+Enter the adjecent side len:23
+Enter the oppposite side len:10
+25.079872407968907
+
+Enter the adjecent side len:5
+Enter the oppposite side len:12
+13.0
+
+
+program 6:
+#Write a program that generates 5 random floating-point numbers between 0 and 1 using the rand () function.
+#23B81A62A4
+
+from random import *
+for i in range(5):
+    print(random())
+
+output:-
+0.3210113889653806
+0.7492496319776211
+0.8114024589045743
+0.6987101418257791
+0.4641684234095337
+
+
+program 7:-
+#Create a program that simulates rolling a six-sided dice using the randint() function to generate a random integer between 1 and 6.
+#23B81A62A4
+
+from random import *
+for i in range(6):
+    print(randint(1,7))
+
+output:-
+
+3
+6
+4
+2
+3
+5
+
+program 8:-
+
+#Create a program that generates 10 random numbers between 1 and 10 with decimal places using the uniform () function.
+#23B81A62A4
+
+from random import *
+for i in range(10):
+    print(uniform(1,11))
+
+output:-
+
+2.4231347927240314
+8.468846694145405
+6.556237578302058
+9.905357909668957
+9.603537830129774
+6.129123696536188
+7.6620764853670185
+4.233060003109866
+6.480402619800647
+9.067668145886284
+
+program 9:-
+
+#Write a program that generates a random number between 10 and 50 (inclusive) using the randrange() function.
+#23B81A62A4
+
+from random import *
+for i in range(10):
+    print(randrange(10,51))
+
+output:-
+44
+22
+23
+17
+23
+32
+23
+24
+39
+35
+
+program 10:-
+
+#Develop a program that randomly selects a name from a list of names using  the choice () function.
+#23B81A62A4
+
+from random import *
+L=['Sainath','Siraj','Rehan','Ismail','Saicharan','Salman','Sreenish','Sathwik']
+for i in range(10):
+    print(choice(L))
+
+output:-
+
+Saicharan
+Ismail
+Rehan
+Siraj
+Siraj
+Sreenish
+Sainath
+Ismail
+Sainath
+Salman
